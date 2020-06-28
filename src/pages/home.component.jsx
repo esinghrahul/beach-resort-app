@@ -1,9 +1,19 @@
 import React from 'react'
 import Hero from '../components/hero.component'
+import Banner from '../components/banner.component'
+import { Link } from 'react-router-dom'
+import Services from '../components/services.component'
 
 const Home = () => {
     return(
-        <Hero></Hero>
+        <React.Fragment>
+        <Hero>
+            <Banner title="Luxurious Rooms" subtitle="Deluxe rooms starting at $299">
+                <Link to= '/rooms' className="btn-primary">Our rooms</Link>
+            </Banner>
+        </Hero>
+        <Services />
+        </React.Fragment>
     )
 }
 
