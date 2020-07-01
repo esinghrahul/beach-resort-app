@@ -4,6 +4,7 @@ import React from "react";
 import RoomList from "./room-list.component";
 import { withRoomConsumer } from "../context";
 import Loading from "./loading.component";
+import RoomFilter from "./room-filter.component";
 
 function RoomContainer({context}){
     const {loading, sortedRooms, rooms}= context
@@ -12,7 +13,7 @@ function RoomContainer({context}){
           }
         return (
           <>
-            Hello
+            <RoomFilter rooms= {rooms} />
             <RoomList rooms= {sortedRooms} />
           </>
         );
